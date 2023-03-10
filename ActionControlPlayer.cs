@@ -74,6 +74,17 @@ namespace ActionControl
 					Main.musicVolume = 1f;
 				}
 			}
+			if (ActionControl.ToggleAmbient.JustPressed)
+			{
+				if (Main.ambientVolume > 0f)
+				{
+					Main.ambientVolume = 0f;
+				}
+				else
+				{
+					Main.ambientVolume = 1f;
+				}
+			}
 		}
 		public override void PostUpdateMiscEffects()
 		{
