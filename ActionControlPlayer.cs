@@ -74,12 +74,12 @@ namespace ActionControl
 				PlayerInput.LockVanillaMouseScroll("walking");
 				if (PlayerInput.ScrollWheelDelta > 0 && walkSpeed < 1f)
 				{
-					walkSpeed += 0.10f;
+					walkSpeed += 0.05f;
 					//SoundEngine.PlaySound(SoundID.Run with {Pitch = +0.5f, Volume = 1f}, player.position);
 				}
 				if (PlayerInput.ScrollWheelDelta < 0 && walkSpeed > 0f)
 				{
-					walkSpeed -= 0.10f;
+					walkSpeed -= 0.05f;
 					//SoundEngine.PlaySound(SoundID.Run with {Pitch = -0.5f, Volume = 1f}, player.position);
 				}
 			}
