@@ -38,13 +38,29 @@ namespace ActionControl
 				}
 			}
 			//	Walking
+			if (ActionControl.Walk.JustPressed)
+			{
+				//	If Toggle..
+				if (ActionControlConfigClient.Instance.toggleWalking)
+				{
+					walking = !walking;
+				}
+			}
 			if (ActionControl.Walk.Current)
 			{
-				walking = true;
+				//	If Hold..
+				if (!ActionControlConfigClient.Instance.toggleWalking)
+				{
+					walking = true;
+				}
 			}
 			if (ActionControl.Walk.JustReleased)
 			{
-				walking = false;
+				//	If Hold..
+				if (!ActionControlConfigClient.Instance.toggleWalking)
+				{
+					walking = false;
+				}
 			}
 			//	Volume
 			if (ActionControl.ToggleMusic.JustPressed)
