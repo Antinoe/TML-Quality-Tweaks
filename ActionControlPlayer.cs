@@ -57,15 +57,19 @@ namespace ActionControl
 			}
 
 			//	Walking
-			if (PlayerInput.ScrollWheelDelta > 0 && walkSpeed < 1f)
+			if (walking)
 			{
-				walkSpeed += 0.10f;
-				//SoundEngine.PlaySound(SoundID.Run with {Pitch = +0.5f, Volume = 1f}, player.position);
-			}
-			if (PlayerInput.ScrollWheelDelta < 0 && walkSpeed > 0f)
-			{
-				walkSpeed -= 0.10f;
-				//SoundEngine.PlaySound(SoundID.Run with {Pitch = -0.5f, Volume = 1f}, player.position);
+				PlayerInput.LockVanillaMouseScroll("walking");
+				if (PlayerInput.ScrollWheelDelta > 0 && walkSpeed < 1f)
+				{
+					walkSpeed += 0.10f;
+					//SoundEngine.PlaySound(SoundID.Run with {Pitch = +0.5f, Volume = 1f}, player.position);
+				}
+				if (PlayerInput.ScrollWheelDelta < 0 && walkSpeed > 0f)
+				{
+					walkSpeed -= 0.10f;
+					//SoundEngine.PlaySound(SoundID.Run with {Pitch = -0.5f, Volume = 1f}, player.position);
+				}
 			}
 		}
 		public override void PostUpdateRunSpeeds()
