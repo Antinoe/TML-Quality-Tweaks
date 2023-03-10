@@ -46,6 +46,18 @@ namespace ActionControl
 			{
 				walking = false;
 			}
+			//	Volume
+			if (ActionControl.ToggleMusic.JustPressed)
+			{
+				if (Main.musicVolume > 0f)
+				{
+					Main.musicVolume = 0f;
+				}
+				else
+				{
+					Main.musicVolume = 1f;
+				}
+			}
 		}
 		public override void PostUpdateMiscEffects()
 		{
