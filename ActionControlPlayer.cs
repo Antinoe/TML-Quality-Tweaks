@@ -14,7 +14,8 @@ namespace ActionControl
     {
 		public bool cannotBuild = false;
 		public bool walking = false;
-		public float walkSpeed = 0.45f;
+		public float walkSpeed = 0.35f;
+		public bool sprinting = false;
 		
 		public override void ProcessTriggers(TriggersSet triggersSet)
 		{
@@ -37,7 +38,8 @@ namespace ActionControl
 					SoundEngine.PlaySound(SoundID.Unlock with {Pitch = +0.50f, Volume = 1f}, player.position);
 				}
 			}
-			//	Walking
+
+			//	Movement
 			if (ActionControl.Walk.JustPressed)
 			{
 				//	If Toggle..
@@ -53,6 +55,9 @@ namespace ActionControl
 				//	If Hold..
 				if (!ActionControlConfigClient.Instance.toggleWalking)	{	walking = false;	}
 			}
+			if (ActionControl.Sprint.Current)	{	sprinting = true;	}
+			if (ActionControl.Sprint.JustReleased)	{	sprinting = false;	}
+
 			//	Volume
 			if (ActionControl.ToggleMusic.JustPressed)
 			{
@@ -103,6 +108,20 @@ namespace ActionControl
 			{
 				player.accRunSpeed *= walkSpeed;
 				player.maxRunSpeed *= walkSpeed;
+			}
+			if (sprinting)
+			{
+				//	The "less than 50% or less" check is here so you can't go faster than your Run Speed while Walking.
+				if (walking && walkSpeed <= 0.5f)
+				{
+					player.accRunSpeed *= 2f;
+					player.maxRunSpeed *= 2f;
+				}
+				if (!walking)
+				{
+					player.accRunSpeed *= 1.5f;
+					player.maxRunSpeed *= 1.5f;
+				}
 			}
 		}
 	}
