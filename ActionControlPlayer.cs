@@ -41,49 +41,28 @@ namespace ActionControl
 			if (ActionControl.Walk.JustPressed)
 			{
 				//	If Toggle..
-				if (ActionControlConfigClient.Instance.toggleWalking)
-				{
-					walking = !walking;
-				}
+				if (ActionControlConfigClient.Instance.toggleWalking)	{	walking = !walking;	}
 			}
 			if (ActionControl.Walk.Current)
 			{
 				//	If Hold..
-				if (!ActionControlConfigClient.Instance.toggleWalking)
-				{
-					walking = true;
-				}
+				if (!ActionControlConfigClient.Instance.toggleWalking)	{	walking = true;	}
 			}
 			if (ActionControl.Walk.JustReleased)
 			{
 				//	If Hold..
-				if (!ActionControlConfigClient.Instance.toggleWalking)
-				{
-					walking = false;
-				}
+				if (!ActionControlConfigClient.Instance.toggleWalking)	{	walking = false;	}
 			}
 			//	Volume
 			if (ActionControl.ToggleMusic.JustPressed)
 			{
-				if (Main.musicVolume > 0f)
-				{
-					Main.musicVolume = 0f;
-				}
-				else
-				{
-					Main.musicVolume = 1f;
-				}
+				if (Main.musicVolume > 0f)	{	Main.musicVolume = 0f;	}
+				else	{	Main.musicVolume = 1f;	}
 			}
 			if (ActionControl.ToggleAmbient.JustPressed)
 			{
-				if (Main.ambientVolume > 0f)
-				{
-					Main.ambientVolume = 0f;
-				}
-				else
-				{
-					Main.ambientVolume = 1f;
-				}
+				if (Main.ambientVolume > 0f)	{	Main.ambientVolume = 0f;	}
+				else	{	Main.ambientVolume = 1f;	}
 			}
 		}
 		public override void PostUpdateMiscEffects()
