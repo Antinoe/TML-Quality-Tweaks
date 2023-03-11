@@ -59,6 +59,11 @@ namespace ActionControl
 				if (Main.musicVolume > 0f)	{	Main.musicVolume = 0f;	}
 				else	{	Main.musicVolume = 1f;	}
 			}
+			if (ActionControl.ToggleSound.JustPressed)
+			{
+				if (Main.soundVolume > 0f)	{	Main.soundVolume = 0f;	}
+				else	{	Main.soundVolume = 1f;	}
+			}
 			if (ActionControl.ToggleAmbient.JustPressed)
 			{
 				if (Main.ambientVolume > 0f)	{	Main.ambientVolume = 0f;	}
