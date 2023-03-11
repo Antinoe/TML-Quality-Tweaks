@@ -117,10 +117,10 @@ namespace ActionControl
 					player.accRunSpeed *= 2f;
 					player.maxRunSpeed *= 2f;
 				}
-				if (!walking)
+				if (!walking && ActionControlConfigServer.Instance.enableSprinting)
 				{
-					player.accRunSpeed *= 1.5f;
-					player.maxRunSpeed *= 1.5f;
+					player.accRunSpeed *= ActionControlConfigServer.Instance.sprintSpeed;
+					player.maxRunSpeed *= ActionControlConfigServer.Instance.sprintSpeed;
 				}
 			}
 		}
