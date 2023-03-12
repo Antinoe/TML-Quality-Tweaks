@@ -115,8 +115,8 @@ namespace ActionControl
 				//	The "less than 50% or less" check is here so you can't go faster than your Run Speed while Walking.
 				if (walking && walkSpeed <= 0.5f)
 				{
-					player.accRunSpeed *= 2f;
-					player.maxRunSpeed *= 2f;
+					player.accRunSpeed *= ActionControlConfigClient.Instance.fastWalkSpeed;
+					player.maxRunSpeed *= ActionControlConfigClient.Instance.fastWalkSpeed;
 				}
 				if (!walking && ActionControlConfigServer.Instance.enableSprinting)
 				{

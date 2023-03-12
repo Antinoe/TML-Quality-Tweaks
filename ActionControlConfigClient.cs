@@ -17,6 +17,14 @@ namespace ActionControl
         [DefaultValue(false)]
         public bool toggleWalking {get; set;}
 
+        [Label("[i:HermesBoots] Fast Walk Speed")]
+        [Tooltip("Multiplied Walk Speed when holding the Sprint keybind while Walking.\n[Default: 2]")]
+        [Slider]
+        [DefaultValue(2f)]
+        [Range(1.05f, 2f)]
+        [Increment(0.05f)]
+        public float fastWalkSpeed {get; set;}
+
         [Label("[i:Megaphone] Volume Toggle Amount")]
         [Tooltip("The volume of audio when toggled off.\n[Default: 0.01]")]
         [Slider]
