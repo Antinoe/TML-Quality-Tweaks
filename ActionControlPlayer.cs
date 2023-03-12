@@ -59,19 +59,20 @@ namespace ActionControl
 			if (ActionControl.Sprint.JustReleased)	{	sprinting = false;	}
 
 			//	Volume
+			var volume = ActionControlConfigClient.Instance.volumeToggleAmount;
 			if (ActionControl.ToggleMusic.JustPressed)
 			{
-				if (Main.musicVolume > 0f)	{	Main.musicVolume = 0f;	}
+				if (Main.musicVolume > volume)	{	Main.musicVolume = volume;	}
 				else	{	Main.musicVolume = 1f;	}
 			}
 			if (ActionControl.ToggleSound.JustPressed)
 			{
-				if (Main.soundVolume > 0f)	{	Main.soundVolume = 0f;	}
+				if (Main.soundVolume > volume)	{	Main.soundVolume = volume;	}
 				else	{	Main.soundVolume = 1f;	}
 			}
 			if (ActionControl.ToggleAmbient.JustPressed)
 			{
-				if (Main.ambientVolume > 0f)	{	Main.ambientVolume = 0f;	}
+				if (Main.ambientVolume > volume)	{	Main.ambientVolume = volume;	}
 				else	{	Main.ambientVolume = 1f;	}
 			}
 		}
