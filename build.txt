@@ -1,7 +1,7 @@
 author = Antinous
 version = 1.0
 displayName = Action Control
-homepage = https://github.com/Antinoe/Action-Control
+homepage = https://github.com/Antinoe/TML-Action-Control
 hideCode = false
 hideResources = false
 includeSource = true
