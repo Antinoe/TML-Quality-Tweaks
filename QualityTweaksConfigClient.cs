@@ -1,14 +1,13 @@
 using System.ComponentModel;
 using Terraria.ModLoader.Config;
 
-namespace ActionControl
+namespace QualityTweaks
 {
     [Label("Client Config")]
-    public class ActionControlConfigClient : ModConfig
+    public class QualityTweaksConfigClient : ModConfig
     {
         public override ConfigScope Mode => ConfigScope.ClientSide;
-		
-        public static ActionControlConfigClient Instance;
+        public static QualityTweaksConfigClient Instance;
 		
 	[Header("General")]
 		
