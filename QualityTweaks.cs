@@ -19,7 +19,7 @@ namespace QualityTweaks
             ToggleSound = KeybindLoader.RegisterKeybind(this, "Toggle Sound", "P");
             ToggleAmbient = KeybindLoader.RegisterKeybind(this, "Toggle Ambient", "P");
             Walk = KeybindLoader.RegisterKeybind(this, "Walk", "LeftControl");
-            Sprint = KeybindLoader.RegisterKeybind(this, "Sprint", "LeftShift");
+            Sprint = KeybindLoader.RegisterKeybind(this, "Sprint/Fast Walk", "LeftShift");
         }
         
         public override void Unload()
