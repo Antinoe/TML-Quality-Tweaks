@@ -8,9 +8,9 @@ using Terraria.Audio;
 //	This will be necessary later on.
 using static Terraria.Mount;
 
-namespace ActionControl
+namespace QualityTweaks
 {
-    public class ActionControlPlayer : ModPlayer
+    public class QualityTweaksPlayer : ModPlayer
     {
 		public bool cannotBuild = false;
 		public bool walking = false;
@@ -24,7 +24,7 @@ namespace ActionControl
 			//if (Main.keyState.IsKeyDown(Keys.LeftShift))
 			
 			//	Building
-			if (ActionControl.ToggleBuilding.JustPressed)
+			if (QualityTweaks.ToggleBuilding.JustPressed)
 			{
 				//cannotBuild = !cannotBuild;
 				if (!cannotBuild)
@@ -40,37 +40,37 @@ namespace ActionControl
 			}
 
 			//	Movement
-			if (ActionControl.Walk.JustPressed)
+			if (QualityTweaks.Walk.JustPressed)
 			{
 				//	If Toggle..
-				if (ActionControlConfigClient.Instance.toggleWalking)	{	walking = !walking;	}
+				if (QualityTweaksConfigClient.Instance.toggleWalking)	{	walking = !walking;	}
 			}
-			if (ActionControl.Walk.Current)
+			if (QualityTweaks.Walk.Current)
 			{
 				//	If Hold..
-				if (!ActionControlConfigClient.Instance.toggleWalking)	{	walking = true;	}
+				if (!QualityTweaksConfigClient.Instance.toggleWalking)	{	walking = true;	}
 			}
-			if (ActionControl.Walk.JustReleased)
+			if (QualityTweaks.Walk.JustReleased)
 			{
 				//	If Hold..
-				if (!ActionControlConfigClient.Instance.toggleWalking)	{	walking = false;	}
+				if (!QualityTweaksConfigClient.Instance.toggleWalking)	{	walking = false;	}
 			}
-			if (ActionControl.Sprint.Current)	{	sprinting = true;	}
-			if (ActionControl.Sprint.JustReleased)	{	sprinting = false;	}
+			if (QualityTweaks.Sprint.Current)	{	sprinting = true;	}
+			if (QualityTweaks.Sprint.JustReleased)	{	sprinting = false;	}
 
 			//	Volume
-			var volume = ActionControlConfigClient.Instance.volumeToggleAmount;
-			if (ActionControl.ToggleMusic.JustPressed)
+			var volume = QualityTweaksConfigClient.Instance.volumeToggleAmount;
+			if (QualityTweaks.ToggleMusic.JustPressed)
 			{
 				if (Main.musicVolume > volume)	{	Main.musicVolume = volume;	}
 				else	{	Main.musicVolume = 1f;	}
 			}
-			if (ActionControl.ToggleSound.JustPressed)
+			if (QualityTweaks.ToggleSound.JustPressed)
 			{
 				if (Main.soundVolume > volume)	{	Main.soundVolume = volume;	}
 				else	{	Main.soundVolume = 1f;	}
 			}
-			if (ActionControl.ToggleAmbient.JustPressed)
+			if (QualityTweaks.ToggleAmbient.JustPressed)
 			{
 				if (Main.ambientVolume > volume)	{	Main.ambientVolume = volume;	}
 				else	{	Main.ambientVolume = 1f;	}
@@ -115,13 +115,13 @@ namespace ActionControl
 				//	The "less than 50% or less" check is here so you can't go faster than your Run Speed while Walking.
 				if (walking && walkSpeed <= 0.5f)
 				{
-					player.accRunSpeed *= ActionControlConfigClient.Instance.fastWalkSpeed;
-					player.maxRunSpeed *= ActionControlConfigClient.Instance.fastWalkSpeed;
+					player.accRunSpeed *= QualityTweaksConfigClient.Instance.fastWalkSpeed;
+					player.maxRunSpeed *= QualityTweaksConfigClient.Instance.fastWalkSpeed;
 				}
-				if (!walking && ActionControlConfigServer.Instance.enableSprinting)
+				if (!walking && QualityTweaksConfigServer.Instance.enableSprinting)
 				{
-					player.accRunSpeed *= ActionControlConfigServer.Instance.sprintSpeed;
-					player.maxRunSpeed *= ActionControlConfigServer.Instance.sprintSpeed;
+					player.accRunSpeed *= QualityTweaksConfigServer.Instance.sprintSpeed;
+					player.maxRunSpeed *= QualityTweaksConfigServer.Instance.sprintSpeed;
 				}
 			}
 		}

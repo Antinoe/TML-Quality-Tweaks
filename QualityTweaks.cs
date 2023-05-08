@@ -1,9 +1,9 @@
 using Terraria.ModLoader;
 
 
-namespace ActionControl
+namespace QualityTweaks
 {
-	public class ActionControl : Mod
+	public class QualityTweaks : Mod
 	{
 		public static ModKeybind ToggleBuilding;
         public static ModKeybind ToggleMusic;
