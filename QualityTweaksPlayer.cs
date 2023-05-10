@@ -88,6 +88,7 @@ namespace QualityTweaks
 			//	Walking
 			if (walking)
 			{
+				Player.velocity.X *= 0.95f;
 				PlayerInput.LockVanillaMouseScroll("walking");
 				if (PlayerInput.ScrollWheelDelta > 0 && walkSpeed < 1f)
 				{
