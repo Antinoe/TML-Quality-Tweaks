@@ -23,5 +23,10 @@ namespace QualityTweaks
         [Range(1.10f, 3f)]
         [Increment(0.10f)]
         public float sprintSpeed {get; set;}
+
+        [Label("[i:Cog][i:HermesBoots] Fix the Walk Speed Bug?")]
+        [Tooltip("Accessories like the Hermes Boots take effect when walking at a certain speed.\nThis option fixes that.\nDisabled by default for now because it messes with the Fast Walking feature.")]
+        [DefaultValue(false)]
+        public bool fixWalkSpeed {get; set;}
     }
 }
