@@ -7,12 +7,12 @@ using Terraria.ModLoader.IO;
 
 namespace QualityTweaks
 {
-    public class QualityTweaksHalfStackGlobalItem : GlobalItem
+    public class QualityTweaksSplitStack : GlobalItem
 	{
         public override bool CanRightClick(Item item)
         {
-            bool canHalfStack = Main.mouseItem.IsAir && item.stack > 1 && Main.keyState.IsKeyDown(Keys.LeftShift);
-            if (canHalfStack)
+            bool canSplitStack = Main.mouseItem.IsAir && item.stack > 1 && Main.keyState.IsKeyDown(Keys.LeftShift);
+            if (canSplitStack)
             {
                 return true;
             }
@@ -20,8 +20,8 @@ namespace QualityTweaks
         }
         public override void RightClick(Item item, Player player)
         {
-            bool canHalfStack = Main.mouseItem.IsAir && item.stack > 1 && Main.keyState.IsKeyDown(Keys.LeftShift);
-            if (canHalfStack)
+            bool canSplitStack = Main.mouseItem.IsAir && item.stack > 1 && Main.keyState.IsKeyDown(Keys.LeftShift);
+            if (canSplitStack)
             {
                 item.stack++;
                 Main.mouseItem = item.Clone();
@@ -29,6 +29,14 @@ namespace QualityTweaks
                 Main.mouseItem.stack -= item.stack;
             }
         }
+    }
+    public class QualityTweaksInsertOneFromStack : GlobalItem
+    {
+        //  With item stack in-hand, RightClick an empty slot to insert one item from the stack into that slot.
+    }
+    public class QualityTweaksDragStack : GlobalItem
+    {
+        //  With item stack in-hand, hold RightClick while dragging across inventory slots to insert items from the stack into each one.
     }
     public class QualityTweaksColoringGlobalItem : GlobalItem
 	{
