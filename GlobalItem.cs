@@ -30,4 +30,36 @@ namespace QualityTweaks
             }
         }
     }
+    public class QualityTweaksColoringGlobalItem : GlobalItem
+	{
+        public override bool CanRightClick(Item item)
+        {
+            if (Main.mouseItem.type == ItemID.RedDye)
+            {
+                return true;
+            }
+            return false;
+        }
+        public override void RightClick(Item item, Player player)
+        {
+            var heldItem = Main.mouseItem;
+            if (heldItem.type == ItemID.RedDye)
+            {
+                item.color = Color.Red;
+                item.stack++;
+            }
+        }
+
+        public override void SaveData(Item item, TagCompound tag)
+        {
+			tag.Add("Color", item.color);
+		}
+        public override void LoadData(Item item, TagCompound tag)
+		{
+            if (tag.ContainsKey("Color"))
+            {
+                item.color = tag.Get<Color>("Color");
+            }
+		}
+    }
 }
