@@ -1,5 +1,3 @@
-//	Keeping this here for when Key Detection will be required.
-using Microsoft.Xna.Framework.Input;
 using Terraria;
 using Terraria.GameInput;
 using Terraria.ID;
@@ -43,12 +41,12 @@ namespace QualityTweaks
 			if (QualityTweaks.Walk.JustPressed)
 			{
 				//	If Toggle..
-				if (QualityTweaksConfigClient.Instance.toggleWalking)	{	walking = !walking;	}
+				if (QualityTweaksConfigClient.Instance.toggleWalking && QualityTweaksConfigServer.Instance.enableWalking)	{	walking = !walking;	}
 			}
 			if (QualityTweaks.Walk.Current)
 			{
 				//	If Hold..
-				if (!QualityTweaksConfigClient.Instance.toggleWalking)	{	walking = true;	}
+				if (!QualityTweaksConfigClient.Instance.toggleWalking && QualityTweaksConfigServer.Instance.enableWalking)	{	walking = true;	}
 			}
 			if (QualityTweaks.Walk.JustReleased)
 			{

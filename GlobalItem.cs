@@ -9,24 +9,32 @@ namespace QualityTweaks
 {
     public class QualityTweaksSplitStack : GlobalItem
 	{
+        //  With an empty hand, Shift+RightClick an item stack to grab half of it.
+
         public override bool CanRightClick(Item item)
         {
-            bool canSplitStack = Main.mouseItem.IsAir && item.stack > 1 && Main.keyState.IsKeyDown(Keys.LeftShift);
-            if (canSplitStack)
+            if (QualityTweaksConfigServer.Instance.enableSplitStack)
             {
-                return true;
+                bool canSplitStack = Main.mouseItem.IsAir && item.stack > 1 && Main.keyState.IsKeyDown(Keys.LeftShift);
+                if (canSplitStack)
+                {
+                    return true;
+                }
             }
             return false;
         }
         public override void RightClick(Item item, Player player)
         {
-            bool canSplitStack = Main.mouseItem.IsAir && item.stack > 1 && Main.keyState.IsKeyDown(Keys.LeftShift);
-            if (canSplitStack)
+            if (QualityTweaksConfigServer.Instance.enableSplitStack)
             {
-                item.stack++;
-                Main.mouseItem = item.Clone();
-                item.stack /= 2;
-                Main.mouseItem.stack -= item.stack;
+                bool canSplitStack = Main.mouseItem.IsAir && item.stack > 1 && Main.keyState.IsKeyDown(Keys.LeftShift);
+                if (canSplitStack)
+                {
+                    item.stack++;
+                    Main.mouseItem = item.Clone();
+                    item.stack /= 2;
+                    Main.mouseItem.stack -= item.stack;
+                }
             }
         }
     }
@@ -40,33 +48,52 @@ namespace QualityTweaks
     }
     public class QualityTweaksColoringGlobalItem : GlobalItem
 	{
+        //  With a dye of your choice in-hand, RightClick an item to color it.
+
+        public bool isDye = (Main.mouseItem.type == ItemID.RedDye);
+        public override bool InstancePerEntity => true;
         public override bool CanRightClick(Item item)
         {
-            if (Main.mouseItem.type == ItemID.RedDye)
+            if (QualityTweaksConfigServer.Instance.enableItemColoring)
             {
-                return true;
+                if (isDye)
+                {
+                    return true;
+                }
             }
             return false;
         }
         public override void RightClick(Item item, Player player)
         {
             var heldItem = Main.mouseItem;
-            if (heldItem.type == ItemID.RedDye)
+            if (QualityTweaksConfigServer.Instance.enableItemColoring)
             {
-                item.color = Color.Red;
-                item.stack++;
+                if (isDye)
+                {
+                    if (heldItem.type == ItemID.RedDye)
+                    {
+                        item.color = Color.Red;
+                        item.stack++;
+                    }
+                }
             }
         }
 
         public override void SaveData(Item item, TagCompound tag)
         {
-			tag.Add("Color", item.color);
+            if (QualityTweaksConfigServer.Instance.enableItemColoring)
+            {
+			    tag.Add("Color", item.color);
+            }
 		}
         public override void LoadData(Item item, TagCompound tag)
 		{
-            if (tag.ContainsKey("Color"))
+            if (QualityTweaksConfigServer.Instance.enableItemColoring)
             {
-                item.color = tag.Get<Color>("Color");
+                if (tag.ContainsKey("Color"))
+                {
+                    item.color = tag.Get<Color>("Color");
+                }
             }
 		}
     }

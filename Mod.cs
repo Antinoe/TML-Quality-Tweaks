@@ -1,6 +1,5 @@
 using Terraria.ModLoader;
 
-
 namespace QualityTweaks
 {
 	public class QualityTweaks : Mod
