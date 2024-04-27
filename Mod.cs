@@ -5,7 +5,7 @@ namespace QualityTweaks
 {
 	public class QualityTweaks : Mod
 	{
-		public static ModKeybind ToggleBuilding;
+	public static ModKeybind ToggleBuilding;
         public static ModKeybind ToggleMusic;
         public static ModKeybind ToggleSound;
         public static ModKeybind ToggleAmbient;
@@ -34,7 +34,8 @@ namespace QualityTweaks
             Sprint = null;
         }
     }
-	public static class Sounds
+    	//	I'm not sure if 'partial' is required, but I've seen it in other places, so I'll keep it just in case.
+	public static partial class Sounds
 	{
 		public static class Item
 		{
