@@ -1,4 +1,5 @@
 using Terraria.ModLoader;
+using Terraria.Audio;
 
 namespace QualityTweaks
 {
@@ -13,6 +14,8 @@ namespace QualityTweaks
 		
         public override void Load()
         {
+            base.Load();
+            QualityTweaksConfigBundles.Instance = ModContent.GetInstance<QualityTweaksConfigBundles>();
             ToggleBuilding = KeybindLoader.RegisterKeybind(this, "Toggle Building", "OemTilde");
             ToggleMusic = KeybindLoader.RegisterKeybind(this, "Toggle Music", "P");
             ToggleSound = KeybindLoader.RegisterKeybind(this, "Toggle Sound", "P");
@@ -31,4 +34,28 @@ namespace QualityTweaks
             Sprint = null;
         }
     }
+	public static class Sounds
+	{
+		public static class Item
+		{
+			public static readonly SoundStyle BundleInsert = new($"{nameof(QualityTweaks)}/Sounds/BundleInsert", 3)
+			{
+				Volume = 0.5f,
+				PitchVariance = 0.25f,
+				MaxInstances = 12
+			};
+			public static readonly SoundStyle BundleExtract = new($"{nameof(QualityTweaks)}/Sounds/BundleExtract", 3)
+			{
+				Volume = 0.5f,
+				PitchVariance = 0.25f,
+				MaxInstances = 12
+			};
+			public static readonly SoundStyle BundleDump = new($"{nameof(QualityTweaks)}/Sounds/BundleDump", 3)
+			{
+				Volume = 0.5f,
+				PitchVariance = 0.25f,
+				MaxInstances = 12
+			};
+		}
+	}
 }
