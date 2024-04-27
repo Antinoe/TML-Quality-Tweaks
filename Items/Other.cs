@@ -24,7 +24,7 @@ namespace QualityTweaks.Items
 		
 		public override void AddRecipes()
 		{
-			if (QualityTweaksConfigBundles.Instance.enablePocketCaseRecipe)
+			if (QualityTweaksConfigBundles.Instance.enableMaster && QualityTweaksConfigBundles.Instance.enablePocketCaseRecipe)
 			{
 				Recipe Bundle = CreateRecipe(1);
 				Bundle.AddRecipeGroup(RecipeGroupID.Wood, QualityTweaksConfigBundles.Instance.amountPocketCase);
@@ -53,7 +53,7 @@ namespace QualityTweaks.Items
 		
 		public override void AddRecipes()
 		{
-			if (QualityTweaksConfigBundles.Instance.enableApparelCaseRecipe)
+			if (QualityTweaksConfigBundles.Instance.enableMaster && QualityTweaksConfigBundles.Instance.enableApparelCaseRecipe)
 			{
 				Recipe Bundle = CreateRecipe(1);
 				Bundle.AddRecipeGroup(RecipeGroupID.Wood, QualityTweaksConfigBundles.Instance.amountApparelCaseWood);
@@ -87,7 +87,7 @@ namespace QualityTweaks.Items
 		
 		public override void AddRecipes()
 		{
-			if (QualityTweaksConfigBundles.Instance.enableDoubleScabbardRecipe)
+			if (QualityTweaksConfigBundles.Instance.enableMaster && QualityTweaksConfigBundles.Instance.enableDoubleScabbardRecipe)
 			{
 				Recipe Bundle = CreateRecipe(1);
 				Bundle.AddIngredient(ItemID.Leather, QualityTweaksConfigBundles.Instance.amountDoubleScabbard);

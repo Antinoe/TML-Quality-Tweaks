@@ -24,7 +24,7 @@ namespace QualityTweaks.Items
 
 		public override void AddRecipes()
 		{
-			if (QualityTweaksConfigBundles.Instance.enableCrudeBundleRecipe)
+			if (QualityTweaksConfigBundles.Instance.enableMaster && QualityTweaksConfigBundles.Instance.enableCrudeBundleRecipe)
 			{
 				Recipe Bundle = CreateRecipe(1);
 				Bundle.AddIngredient(ItemID.Cobweb, QualityTweaksConfigBundles.Instance.amountCrudeBundle);
@@ -52,7 +52,7 @@ namespace QualityTweaks.Items
 		
 		public override void AddRecipes()
 		{
-			if (QualityTweaksConfigBundles.Instance.enableSilkBundleRecipe)
+			if (QualityTweaksConfigBundles.Instance.enableMaster && QualityTweaksConfigBundles.Instance.enableSilkBundleRecipe)
 			{
 				Recipe Bundle = CreateRecipe(1);
 				Bundle.AddIngredient(ItemID.Silk, QualityTweaksConfigBundles.Instance.amountSilkBundle);
@@ -80,7 +80,7 @@ namespace QualityTweaks.Items
 		
 		public override void AddRecipes()
 		{
-			if (QualityTweaksConfigBundles.Instance.enableLeatherBundleRecipe)
+			if (QualityTweaksConfigBundles.Instance.enableMaster && QualityTweaksConfigBundles.Instance.enableLeatherBundleRecipe)
 			{
 				Recipe Bundle = CreateRecipe(1);
 				Bundle.AddIngredient(ItemID.Leather, QualityTweaksConfigBundles.Instance.amountLeatherBundle);

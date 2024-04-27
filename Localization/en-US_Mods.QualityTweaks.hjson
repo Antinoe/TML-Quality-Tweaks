@@ -528,6 +528,15 @@ Configs: {
 				[Default: 10]
 				'''
 		}
+
+		enableMaster: {
+			Tooltip:
+				'''
+				Turn this off to disable Bundle recipes entirely.
+				[Default: On]
+				'''
+			Label: "[i:Lever] Master Switch"
+		}
 	}
 
 	QualityTweaksConfigClient: {
