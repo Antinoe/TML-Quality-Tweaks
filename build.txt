@@ -1,0 +1,6 @@
+displayName = Quality Tweaks
+author = Antinous
+version = 0.2
+homepage = https://github.com/Antinoe/TML-Quality-Tweaks
+includeSource = true
+hideResources = false

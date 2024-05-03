@@ -1,0 +1,555 @@
+Configs: {
+	QualityTweaksServer: {
+		SlowMovement: {
+			Tooltip: Should clients have their speed reduced by 35%?
+			Label: "[i:TurtleShell] Slow Movement"
+		}
+
+		Sprinting: {
+			Tooltip: Should clients be allowed to sprint?
+			Label: "[i:SailfishBoots] Sprinting"
+		}
+
+		FixWalkSpeed: {
+			Tooltip:
+				'''
+				Disallows items like the Hermes Boots from activating while walking.
+				Disabled by default because it has some issues.
+				'''
+			Label: "[i:Cog] Fix Walk Speed Bug"
+		}
+
+		Walking: {
+			Tooltip:
+				'''
+				Should clients be allowed to walk?
+				(Adjust speed by scrolling the Mouse Wheel.)
+				'''
+			Label: "[i:HermesBoots] Walking"
+		}
+
+		ItemColoringToggle: {
+			Tooltip: Should clients be allowed to apply dyes to items?
+			Label: "[i:RedDye] Item Coloring"
+		}
+
+		StackSplittingToggle: {
+			Tooltip: Should clients be allowed to split item stacks?
+			Label: "[i:Wood] Stack Splitting"
+		}
+
+		Headers.ServerOptions: "[i:Cog]Server Options[i:Cog]"
+		DisplayName: Server
+	}
+
+	QualityTweaksClient: {
+		WalkingToggle: {
+			Tooltip: Hold, or Toggle walking?
+			Label: "[i:HermesBoots] Walking Control"
+		}
+
+		Headers.ClientOptions: "[i:Hay]Client Options[i:Hay]"
+		DisplayName: Client
+	}
+
+	BundlesConfig: {
+		DisplayName: Bundles Config
+
+		Headers: {
+			General: General
+			Capacity: Capacity
+			Recipes: Recipes
+		}
+
+		enableDebugInfo: {
+			Label: "[i:Cog] Debug Info"
+			Tooltip: ""
+		}
+
+		enableMaster: {
+			Label: "[i:Lever] Master Switch"
+			Tooltip:
+				'''
+				Turn this off to disable Bundle recipes entirely.
+				[Default: On]
+				'''
+		}
+
+		capacityPocketCase: {
+			Label: "[i:QualityTweaks/PocketCase] Pocket Case Capacity"
+			Tooltip:
+				'''
+				How many items this can hold.
+				[Default: 10]
+				'''
+		}
+
+		capacityCrudePouch: {
+			Label: "[i:QualityTweaks/CrudePouch] Crude Pouch Capacity"
+			Tooltip:
+				'''
+				How many items this can hold.
+				[Default: 30]
+				'''
+		}
+
+		capacityCrudeBundle: {
+			Label: "[i:QualityTweaks/CrudeBundle] Crude Bundle Capacity"
+			Tooltip:
+				'''
+				How many items this can hold.
+				[Default: 90]
+				'''
+		}
+
+		capacitySilkPouch: {
+			Label: "[i:QualityTweaks/SilkPouch] Silk Pouch Capacity"
+			Tooltip:
+				'''
+				How many items this can hold.
+				[Default: 70]
+				'''
+		}
+
+		capacitySilkBundle: {
+			Label: "[i:QualityTweaks/SilkBundle] Silk Bundle Capacity"
+			Tooltip:
+				'''
+				How many items this can hold.
+				[Default: 150]
+				'''
+		}
+
+		capacityLeatherPouch: {
+			Label: "[i:QualityTweaks/LeatherPouch] Leather Pouch Capacity"
+			Tooltip:
+				'''
+				How many items this can hold.
+				[Default: 100]
+				'''
+		}
+
+		capacityLeatherBundle: {
+			Label: "[i:QualityTweaks/LeatherBundle] Leather Bundle Capacity"
+			Tooltip:
+				'''
+				How many items this can hold.
+				[Default: 220]
+				'''
+		}
+
+		capacityApparelCase: {
+			Label: "[i:QualityTweaks/ApparelCase] Apparel Case Capacity"
+			Tooltip:
+				'''
+				How many items this can hold.
+				[Default: 10]
+				'''
+		}
+
+		capacityDoubleScabbard: {
+			Label: "[i:QualityTweaks/DoubleScabbard] Double Scabbard Capacity"
+			Tooltip:
+				'''
+				How many items this can hold.
+				[Default: 6]
+				'''
+		}
+
+		capacityCheatBundle: {
+			Label: "[i:QualityTweaks/CheatBundle] Cheat Bundle Capacity"
+			Tooltip:
+				'''
+				How many items this can hold.
+				[Default: 999]
+				'''
+		}
+
+		enablePocketCaseRecipe: {
+			Label: "[i:QualityTweaks/PocketCase] Enable Pocket Case Recipe"
+			Tooltip:
+				'''
+				If false, Players cannot craft this.
+				[Default: On]
+				'''
+		}
+
+		enablePocketCaseRecipeWorkBench: {
+			Label: "[i:QualityTweaks/PocketCase][i:WorkBench] Pocket Case at WorkBench"
+			Tooltip:
+				'''
+				If true, a nearby WorkBench is require to craft this.
+				[Default: Off]
+				'''
+		}
+
+		amountPocketCase: {
+			Label: "[i:QualityTweaks/PocketCase][i:Wood] Pocket Case Amount"
+			Tooltip:
+				'''
+				How many materials are required to craft this.
+				[Default: 5]
+				'''
+		}
+
+		enableCrudePouchRecipe: {
+			Label: "[i:QualityTweaks/CrudePouch] Enable Crude Pouch Recipe"
+			Tooltip:
+				'''
+				If false, Players cannot craft this.
+				[Default: On]
+				'''
+		}
+
+		enableCrudePouchRecipeWorkBench: {
+			Label: "[i:QualityTweaks/CrudePouch][i:WorkBench] Crude Pouch at WorkBench"
+			Tooltip:
+				'''
+				If true, a nearby WorkBench is require to craft this.
+				[Default: Off]
+				'''
+		}
+
+		enableCrudePouchRecipeLoom: {
+			Label: "[i:QualityTweaks/CrudePouch][i:Loom] Crude Pouch at Loom"
+			Tooltip:
+				'''
+				If true, a nearby Loom is require to craft this.
+				[Default: Off]
+				'''
+		}
+
+		amountCrudePouch: {
+			Label: "[i:QualityTweaks/CrudePouch][i:Cobweb] Crude Pouch Amount"
+			Tooltip:
+				'''
+				How many materials are required to craft this.
+				[Default: 15]
+				'''
+		}
+
+		enableCrudeBundleRecipe: {
+			Label: "[i:QualityTweaks/CrudeBundle] Enable Crude Bundle Recipe"
+			Tooltip:
+				'''
+				If false, Players cannot craft this.
+				[Default: On]
+				'''
+		}
+
+		enableCrudeBundleRecipeWorkBench: {
+			Label: "[i:QualityTweaks/CrudePouch][i:WorkBench] Crude Bundle at WorkBench"
+			Tooltip:
+				'''
+				If true, a nearby WorkBench is require to craft this.
+				[Default: Off]
+				'''
+		}
+
+		enableCrudeBundleRecipeLoom: {
+			Label: "[i:QualityTweaks/CrudePouch][i:Loom] Crude Bundle at Loom"
+			Tooltip:
+				'''
+				If true, a nearby Loom is require to craft this.
+				[Default: Off]
+				'''
+		}
+
+		amountCrudeBundle: {
+			Label: "[i:QualityTweaks/CrudeBundle][i:Cobweb] Crude Bundle Amount"
+			Tooltip:
+				'''
+				How many materials are required to craft this.
+				[Default: 30]
+				'''
+		}
+
+		enableSilkPouchRecipe: {
+			Label: "[i:QualityTweaks/SilkPouch] Enable Silk Pouch Recipe"
+			Tooltip:
+				'''
+				If false, Players cannot craft this.
+				[Default: On]
+				'''
+		}
+
+		enableSilkPouchRecipeWorkBench: {
+			Label: "[i:QualityTweaks/SilkPouch][i:WorkBench] Silk Pouch at WorkBench"
+			Tooltip:
+				'''
+				If true, a nearby WorkBench is require to craft this.
+				[Default: On]
+				'''
+		}
+
+		enableSilkPouchRecipeLoom: {
+			Label: "[i:QualityTweaks/SilkPouch][i:Loom] Silk Pouch at Loom"
+			Tooltip:
+				'''
+				If true, a nearby Loom is require to craft this.
+				[Default: Off]
+				'''
+		}
+
+		amountSilkPouch: {
+			Label: "[i:QualityTweaks/SilkPouch][i:Silk] Silk Pouch Amount"
+			Tooltip:
+				'''
+				How many materials are required to craft this.
+				[Default: 2]
+				'''
+		}
+
+		enableSilkBundleRecipe: {
+			Label: "[i:QualityTweaks/SilkBundle] Enable Silk Bundle Recipe"
+			Tooltip:
+				'''
+				If false, Players cannot craft this.
+				[Default: On]
+				'''
+		}
+
+		enableSilkBundleRecipeWorkBench: {
+			Label: "[i:QualityTweaks/SilkBundle][i:WorkBench] Silk Bundle at WorkBench"
+			Tooltip:
+				'''
+				If true, a nearby WorkBench is require to craft this.
+				[Default: On]
+				'''
+		}
+
+		enableSilkBundleRecipeLoom: {
+			Label: "[i:QualityTweaks/SilkBundle][i:Loom] Silk Bundle at Loom"
+			Tooltip:
+				'''
+				If true, a nearby Loom is require to craft this.
+				[Default: Off]
+				'''
+		}
+
+		amountSilkBundle: {
+			Label: "[i:QualityTweaks/SilkBundle][i:Silk] Silk Bundle Amount"
+			Tooltip:
+				'''
+				How many materials are required to craft this.
+				[Default: 4]
+				'''
+		}
+
+		enableLeatherPouchRecipe: {
+			Label: "[i:QualityTweaks/LeatherPouch] Enable Leather Pouch Recipe"
+			Tooltip:
+				'''
+				If false, Players cannot craft this.
+				[Default: On]
+				'''
+		}
+
+		enableLeatherPouchRecipeWorkBench: {
+			Label: "[i:QualityTweaks/LeatherPouch][i:WorkBench] Leather Pouch at WorkBench"
+			Tooltip:
+				'''
+				If true, a nearby WorkBench is require to craft this.
+				[Default: Off]
+				'''
+		}
+
+		enableLeatherPouchRecipeLoom: {
+			Label: "[i:QualityTweaks/LeatherPouch][i:Loom] Leather Pouch at Loom"
+			Tooltip:
+				'''
+				If true, a nearby Loom is require to craft this.
+				[Default: On]
+				'''
+		}
+
+		amountLeatherPouch: {
+			Label: "[i:QualityTweaks/LeatherPouch][i:Leather] Leather Pouch Amount"
+			Tooltip:
+				'''
+				How many materials are required to craft this.
+				[Default: 2]
+				'''
+		}
+
+		enableLeatherBundleRecipe: {
+			Label: "[i:QualityTweaks/LeatherBundle] Enable Leather Bundle Recipe"
+			Tooltip:
+				'''
+				If false, Players cannot craft this.
+				[Default: On]
+				'''
+		}
+
+		enableLeatherBundleRecipeWorkBench: {
+			Label: "[i:QualityTweaks/LeatherBundle][i:WorkBench] Leather Bundle at WorkBench"
+			Tooltip:
+				'''
+				If true, a nearby WorkBench is require to craft this.
+				[Default: Off]
+				'''
+		}
+
+		enableLeatherBundleRecipeLoom: {
+			Label: "[i:QualityTweaks/LeatherBundle][i:Loom] Leather Bundle at Loom"
+			Tooltip:
+				'''
+				If true, a nearby Loom is require to craft this.
+				[Default: On]
+				'''
+		}
+
+		amountLeatherBundle: {
+			Label: "[i:QualityTweaks/LeatherBundle][i:Leather] Leather Bundle Amount"
+			Tooltip:
+				'''
+				How many materials are required to craft this.
+				[Default: 4]
+				'''
+		}
+
+		enableApparelCaseRecipe: {
+			Label: "[i:QualityTweaks/ApparelCase] Enable Apparel Case Recipe"
+			Tooltip:
+				'''
+				If false, Players cannot craft this.
+				[Default: On]
+				'''
+		}
+
+		enableApparelCaseRecipeWorkBench: {
+			Label: "[i:QualityTweaks/ApparelCase][i:WorkBench] Apparel Case at WorkBench"
+			Tooltip:
+				'''
+				If true, a nearby WorkBench is require to craft this.
+				[Default: On]
+				'''
+		}
+
+		enableApparelCaseRecipeLoom: {
+			Label: "[i:QualityTweaks/ApparelCase][i:Loom] Apparel Case at Loom"
+			Tooltip:
+				'''
+				If true, a nearby Loom is require to craft this.
+				[Default: Off]
+				'''
+		}
+
+		amountApparelCaseWood: {
+			Label: "[i:QualityTweaks/ApparelCase][i:Wood] Apparel Case Wood Amount"
+			Tooltip:
+				'''
+				How much Wood is required to craft this.
+				[Default: 10]
+				'''
+		}
+
+		amountApparelCaseLeather: {
+			Label: "[i:QualityTweaks/ApparelCase][i:Leather] Apparel Case Leather Amount"
+			Tooltip:
+				'''
+				How much Leather is required to craft this.
+				[Default: 5]
+				'''
+		}
+
+		enableDoubleScabbardRecipe: {
+			Label: "[i:QualityTweaks/DoubleScabbard] Enable Double Scabbard Recipe"
+			Tooltip:
+				'''
+				If false, Players cannot craft this.
+				[Default: On]
+				'''
+		}
+
+		enableDoubleScabbardRecipeWorkBench: {
+			Label: "[i:QualityTweaks/DoubleScabbard][i:WorkBench] Double Scabbard at WorkBench"
+			Tooltip:
+				'''
+				If true, a nearby WorkBench is require to craft this.
+				[Default: On]
+				'''
+		}
+
+		enableDoubleScabbardRecipeLoom: {
+			Label: "[i:QualityTweaks/DoubleScabbard][i:Loom] Double Scabbard at Loom"
+			Tooltip:
+				'''
+				If true, a nearby Loom is require to craft this.
+				[Default: Off]
+				'''
+		}
+
+		amountDoubleScabbard: {
+			Label: "[i:QualityTweaks/DoubleScabbard][i:Leather] Double Scabbard Amount"
+			Tooltip:
+				'''
+				How many materials are required to craft this.
+				[Default: 10]
+				'''
+		}
+	}
+}
+
+Keybinds: {
+	Walk.DisplayName: Walk
+	Sprint.DisplayName: Sprint
+	ToggleBuilding.DisplayName: Toggle Building
+}
+
+Items: {
+	ApparelCase: {
+		DisplayName: Apparel Case
+		Tooltip: ""
+	}
+
+	BaseBundle: {
+		DisplayName: Base Bundle
+		Tooltip: ""
+	}
+
+	CheatBundle: {
+		DisplayName: Cheat Bundle
+		Tooltip: ""
+	}
+
+	CrudeBundle: {
+		DisplayName: Crude Bundle
+		Tooltip: ""
+	}
+
+	CrudePouch: {
+		DisplayName: Crude Pouch
+		Tooltip: ""
+	}
+
+	DoubleScabbard: {
+		DisplayName: Double Scabbard
+		Tooltip: ""
+	}
+
+	LeatherBundle: {
+		DisplayName: Leather Bundle
+		Tooltip: ""
+	}
+
+	LeatherPouch: {
+		DisplayName: Leather Pouch
+		Tooltip: ""
+	}
+
+	PocketCase: {
+		DisplayName: Pocket Case
+		Tooltip: ""
+	}
+
+	SilkBundle: {
+		DisplayName: Silk Bundle
+		Tooltip: ""
+	}
+
+	SilkPouch: {
+		DisplayName: Silk Pouch
+		Tooltip: ""
+	}
+}
