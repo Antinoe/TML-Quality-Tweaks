@@ -1,71 +1,58 @@
-Keybinds: {
-	"Toggle Building.DisplayName": Toggle  Building
-	"Toggle Music.DisplayName": Toggle  Music
-	"Toggle Sound.DisplayName": Toggle  Sound
-	"Toggle Ambient.DisplayName": Toggle  Ambient
-	Walk.DisplayName: Walk
-	"Sprint/Fast Walk.DisplayName": Sprint/ Fast  Walk
-}
-
-Items: {
-	ApparelCase: {
-		DisplayName: Apparel Case
-		Tooltip: ""
-	}
-
-	BaseBundle: {
-		DisplayName: Base Bundle
-		Tooltip: ""
-	}
-
-	CheatBundle: {
-		DisplayName: Cheat Bundle
-		Tooltip: ""
-	}
-
-	CrudeBundle: {
-		DisplayName: Crude Bundle
-		Tooltip: ""
-	}
-
-	CrudePouch: {
-		DisplayName: Crude Pouch
-		Tooltip: ""
-	}
-
-	DoubleScabbard: {
-		DisplayName: Double Scabbard
-		Tooltip: ""
-	}
-
-	LeatherBundle: {
-		DisplayName: Leather Bundle
-		Tooltip: ""
-	}
-
-	LeatherPouch: {
-		DisplayName: Leather Pouch
-		Tooltip: ""
-	}
-
-	PocketCase: {
-		DisplayName: Pocket Case
-		Tooltip: ""
-	}
-
-	SilkBundle: {
-		DisplayName: Silk Bundle
-		Tooltip: ""
-	}
-
-	SilkPouch: {
-		DisplayName: Silk Pouch
-		Tooltip: ""
-	}
-}
-
 Configs: {
-	QualityTweaksConfigBundles: {
+	QualityTweaksServer: {
+		SlowMovement: {
+			Tooltip: Should clients have their speed reduced by 35%?
+			Label: "[i:TurtleShell] Slow Movement"
+		}
+
+		Sprinting: {
+			Tooltip: Should clients be allowed to sprint?
+			Label: "[i:SailfishBoots] Sprinting"
+		}
+
+		FixWalkSpeed: {
+			Tooltip:
+				'''
+				Disallows items like the Hermes Boots from activating while walking.
+				Disabled by default because it has some issues.
+				'''
+			Label: "[i:Cog] Fix Walk Speed Bug"
+		}
+
+		Walking: {
+			Tooltip:
+				'''
+				Should clients be allowed to walk?
+				(Adjust speed by scrolling the Mouse Wheel.)
+				'''
+			Label: "[i:HermesBoots] Walking"
+		}
+
+		ItemColoringToggle: {
+			Tooltip: Should clients be allowed to apply dyes to items?
+			Label: "[i:RedDye] Item Coloring"
+		}
+
+		StackSplittingToggle: {
+			Tooltip: Should clients be allowed to split item stacks?
+			Label: "[i:Wood] Stack Splitting"
+		}
+
+		Headers.ServerOptions: "[i:Cog]Server Options[i:Cog]"
+		DisplayName: Server
+	}
+
+	QualityTweaksClient: {
+		WalkingToggle: {
+			Tooltip: Hold, or Toggle walking?
+			Label: "[i:HermesBoots] Walking Control"
+		}
+
+		Headers.ClientOptions: "[i:Hay]Client Options[i:Hay]"
+		DisplayName: Client
+	}
+
+	BundlesConfig: {
 		DisplayName: Bundles Config
 
 		Headers: {
@@ -77,6 +64,15 @@ Configs: {
 		enableDebugInfo: {
 			Label: "[i:Cog] Debug Info"
 			Tooltip: ""
+		}
+
+		enableMaster: {
+			Label: "[i:Lever] Master Switch"
+			Tooltip:
+				'''
+				Turn this off to disable Bundle recipes entirely.
+				[Default: On]
+				'''
 		}
 
 		capacityPocketCase: {
@@ -174,7 +170,6 @@ Configs: {
 			Tooltip:
 				'''
 				If false, Players cannot craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: On]
 				'''
 		}
@@ -184,7 +179,6 @@ Configs: {
 			Tooltip:
 				'''
 				If true, a nearby WorkBench is require to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: Off]
 				'''
 		}
@@ -194,7 +188,6 @@ Configs: {
 			Tooltip:
 				'''
 				How many materials are required to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: 5]
 				'''
 		}
@@ -204,7 +197,6 @@ Configs: {
 			Tooltip:
 				'''
 				If false, Players cannot craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: On]
 				'''
 		}
@@ -214,7 +206,6 @@ Configs: {
 			Tooltip:
 				'''
 				If true, a nearby WorkBench is require to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: Off]
 				'''
 		}
@@ -224,7 +215,6 @@ Configs: {
 			Tooltip:
 				'''
 				If true, a nearby Loom is require to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: Off]
 				'''
 		}
@@ -234,7 +224,6 @@ Configs: {
 			Tooltip:
 				'''
 				How many materials are required to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: 15]
 				'''
 		}
@@ -244,7 +233,6 @@ Configs: {
 			Tooltip:
 				'''
 				If false, Players cannot craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: On]
 				'''
 		}
@@ -254,7 +242,6 @@ Configs: {
 			Tooltip:
 				'''
 				If true, a nearby WorkBench is require to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: Off]
 				'''
 		}
@@ -264,7 +251,6 @@ Configs: {
 			Tooltip:
 				'''
 				If true, a nearby Loom is require to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: Off]
 				'''
 		}
@@ -274,7 +260,6 @@ Configs: {
 			Tooltip:
 				'''
 				How many materials are required to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: 30]
 				'''
 		}
@@ -284,7 +269,6 @@ Configs: {
 			Tooltip:
 				'''
 				If false, Players cannot craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: On]
 				'''
 		}
@@ -294,7 +278,6 @@ Configs: {
 			Tooltip:
 				'''
 				If true, a nearby WorkBench is require to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: On]
 				'''
 		}
@@ -304,7 +287,6 @@ Configs: {
 			Tooltip:
 				'''
 				If true, a nearby Loom is require to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: Off]
 				'''
 		}
@@ -314,7 +296,6 @@ Configs: {
 			Tooltip:
 				'''
 				How many materials are required to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: 2]
 				'''
 		}
@@ -324,7 +305,6 @@ Configs: {
 			Tooltip:
 				'''
 				If false, Players cannot craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: On]
 				'''
 		}
@@ -334,7 +314,6 @@ Configs: {
 			Tooltip:
 				'''
 				If true, a nearby WorkBench is require to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: On]
 				'''
 		}
@@ -344,7 +323,6 @@ Configs: {
 			Tooltip:
 				'''
 				If true, a nearby Loom is require to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: Off]
 				'''
 		}
@@ -354,7 +332,6 @@ Configs: {
 			Tooltip:
 				'''
 				How many materials are required to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: 4]
 				'''
 		}
@@ -364,7 +341,6 @@ Configs: {
 			Tooltip:
 				'''
 				If false, Players cannot craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: On]
 				'''
 		}
@@ -374,7 +350,6 @@ Configs: {
 			Tooltip:
 				'''
 				If true, a nearby WorkBench is require to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: Off]
 				'''
 		}
@@ -384,7 +359,6 @@ Configs: {
 			Tooltip:
 				'''
 				If true, a nearby Loom is require to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: On]
 				'''
 		}
@@ -394,7 +368,6 @@ Configs: {
 			Tooltip:
 				'''
 				How many materials are required to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: 2]
 				'''
 		}
@@ -404,7 +377,6 @@ Configs: {
 			Tooltip:
 				'''
 				If false, Players cannot craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: On]
 				'''
 		}
@@ -414,7 +386,6 @@ Configs: {
 			Tooltip:
 				'''
 				If true, a nearby WorkBench is require to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: Off]
 				'''
 		}
@@ -424,7 +395,6 @@ Configs: {
 			Tooltip:
 				'''
 				If true, a nearby Loom is require to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: On]
 				'''
 		}
@@ -434,7 +404,6 @@ Configs: {
 			Tooltip:
 				'''
 				How many materials are required to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: 4]
 				'''
 		}
@@ -444,7 +413,6 @@ Configs: {
 			Tooltip:
 				'''
 				If false, Players cannot craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: On]
 				'''
 		}
@@ -454,7 +422,6 @@ Configs: {
 			Tooltip:
 				'''
 				If true, a nearby WorkBench is require to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: On]
 				'''
 		}
@@ -464,7 +431,6 @@ Configs: {
 			Tooltip:
 				'''
 				If true, a nearby Loom is require to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: Off]
 				'''
 		}
@@ -474,7 +440,6 @@ Configs: {
 			Tooltip:
 				'''
 				How much Wood is required to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: 10]
 				'''
 		}
@@ -484,7 +449,6 @@ Configs: {
 			Tooltip:
 				'''
 				How much Leather is required to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: 5]
 				'''
 		}
@@ -494,7 +458,6 @@ Configs: {
 			Tooltip:
 				'''
 				If false, Players cannot craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: On]
 				'''
 		}
@@ -504,7 +467,6 @@ Configs: {
 			Tooltip:
 				'''
 				If true, a nearby WorkBench is require to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: On]
 				'''
 		}
@@ -514,7 +476,6 @@ Configs: {
 			Tooltip:
 				'''
 				If true, a nearby Loom is require to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: Off]
 				'''
 		}
@@ -524,98 +485,71 @@ Configs: {
 			Tooltip:
 				'''
 				How many materials are required to craft this.
-				(REQUIRES MOD RELOAD.)
 				[Default: 10]
 				'''
 		}
+	}
+}
 
-		enableMaster: {
-			Tooltip:
-				'''
-				Turn this off to disable Bundle recipes entirely.
-				[Default: On]
-				'''
-			Label: "[i:Lever] Master Switch"
-		}
+Keybinds: {
+	Walk.DisplayName: Walk
+	Sprint.DisplayName: Sprint
+	ToggleBuilding.DisplayName: Toggle Building
+}
+
+Items: {
+	ApparelCase: {
+		DisplayName: Apparel Case
+		Tooltip: ""
 	}
 
-	QualityTweaksConfigClient: {
-		DisplayName: Client Config
-		Headers.General: General Header
-
-		toggleWalking: {
-			Label: "[i:HermesBoots] Hold, or Toggle Walking?"
-			Tooltip:
-				'''
-				Off for Hold, On for Toggle.
-				[Default: Off]
-				'''
-		}
-
-		fastWalkSpeed: {
-			Label: "[i:HermesBoots] Fast Walk Speed"
-			Tooltip:
-				'''
-				Multiplied Walk Speed when holding the Sprint keybind while Walking.
-				[Default: 2]
-				'''
-		}
-
-		volumeToggleAmount: {
-			Label: "[i:Megaphone] Volume Toggle Amount"
-			Tooltip:
-				'''
-				The volume of audio when toggled off.
-				[Default: 0.01]
-				'''
-		}
+	BaseBundle: {
+		DisplayName: Base Bundle
+		Tooltip: ""
 	}
 
-	QualityTweaksConfigServer: {
-		DisplayName: Server Config
-		Headers.General: General Header
+	CheatBundle: {
+		DisplayName: Cheat Bundle
+		Tooltip: ""
+	}
 
-		enableSplitStack: {
-			Label: "[i:Wood] Enable Stack Splitting?"
-			Tooltip: If true, players can grab half of an item stack by Shift+RightClicking.
-		}
+	CrudeBundle: {
+		DisplayName: Crude Bundle
+		Tooltip: ""
+	}
 
-		enableItemColoring: {
-			Label: "[i:RedDye] Enable Item Coloring?"
-			Tooltip:
-				'''
-				If true, players can color items by RightClicking with a dye of their choice.
-				(Disabled by default because it is still being worked on.)
-				'''
-		}
+	CrudePouch: {
+		DisplayName: Crude Pouch
+		Tooltip: ""
+	}
 
-		enableWalking: {
-			Label: "[i:HermesBoots] Enable Walking?"
-			Tooltip:
-				'''
-				If true, players can control their movement speed through the dedicated keybind.
-				Increase/Decrease speed with the Mouse Scroll-Wheel while Walking is active.
-				'''
-		}
+	DoubleScabbard: {
+		DisplayName: Double Scabbard
+		Tooltip: ""
+	}
 
-		enableSprinting: {
-			Label: "[i:SailfishBoots] Enable Sprinting?"
-			Tooltip: ""
-		}
+	LeatherBundle: {
+		DisplayName: Leather Bundle
+		Tooltip: ""
+	}
 
-		sprintSpeed: {
-			Label: "[i:SailfishBoots] Sprint Speed"
-			Tooltip: ""
-		}
+	LeatherPouch: {
+		DisplayName: Leather Pouch
+		Tooltip: ""
+	}
 
-		fixWalkSpeed: {
-			Label: "[i:Cog][i:HermesBoots] Fix the Walk Speed Bug?"
-			Tooltip:
-				'''
-				Accessories like the Hermes Boots take effect when walking at a certain speed.
-				This option fixes that.
-				Disabled by default for now because it messes with the Fast Walking feature.
-				'''
-		}
+	PocketCase: {
+		DisplayName: Pocket Case
+		Tooltip: ""
+	}
+
+	SilkBundle: {
+		DisplayName: Silk Bundle
+		Tooltip: ""
+	}
+
+	SilkPouch: {
+		DisplayName: Silk Pouch
+		Tooltip: ""
 	}
 }

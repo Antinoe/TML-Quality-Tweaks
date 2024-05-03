@@ -1,13 +1,13 @@
 using System.ComponentModel;
 using Terraria.ModLoader.Config;
 
-namespace QualityTweaks
+namespace QualityTweaks.Common.Configs
 {
 	[Label("Bundles Config")]
-	public class QualityTweaksConfigBundles : ModConfig
+	public class BundlesConfig : ModConfig
 	{
 		public override ConfigScope Mode => ConfigScope.ServerSide;
-		public static QualityTweaksConfigBundles Instance;
+		public static BundlesConfig Instance;
 		
 	[Header("General")]
 		
