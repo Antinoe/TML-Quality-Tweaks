@@ -11,9 +11,9 @@ namespace QualityTweaks.Common.Players{
 		public float walkSpeed = 0.50f;
 		public override void ProcessTriggers(TriggersSet triggersSet){
 			var player = Main.LocalPlayer;
-			if(QualityTweaksKeybinds.Walk.JustPressed){if(QualityTweaksClient.Instance.WalkingToggle && QualityTweaksServer.Instance.Walking){walking = !walking;}}
-			if(QualityTweaksKeybinds.Walk.Current){if(!QualityTweaksClient.Instance.WalkingToggle && QualityTweaksServer.Instance.Walking){walking=true;}}
-			if(QualityTweaksKeybinds.Walk.JustReleased){if(!QualityTweaksClient.Instance.WalkingToggle){walking=false;}}
+			if(QualityTweaksKeybinds.Walk.JustPressed){if(!QualityTweaksClient.Instance.WalkingToggle && QualityTweaksServer.Instance.Walking){walking = !walking;}}
+			if(QualityTweaksKeybinds.Walk.Current){if(QualityTweaksClient.Instance.WalkingToggle && QualityTweaksServer.Instance.Walking){walking=true;}}
+			if(QualityTweaksKeybinds.Walk.JustReleased){if(QualityTweaksClient.Instance.WalkingToggle){walking=false;}}
 			if(QualityTweaksKeybinds.Sprint.Current){if(QualityTweaksServer.Instance.Sprinting){sprinting=true;}}
 			if(QualityTweaksKeybinds.Sprint.JustReleased){sprinting=false;}
 		}
